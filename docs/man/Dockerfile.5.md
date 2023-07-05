@@ -154,12 +154,12 @@ or
  arguments.  Parameters specifies via CMD are overwritten by docker run
  arguments.  Specify a plain string for the ENTRYPOINT, and it will execute in
  /bin/sh -c, like a CMD instruction:
- FROM ubuntu
+ FROM ubuntu:22.10
  ENTRYPOINT wc -l -
  This means that the Dockerfile's image always takes stdin as input (that's
  what "-" means), and prints the number of lines (that's what "-l" means). To
  make this optional but default, use a CMD:
- FROM ubuntu
+ FROM ubuntu:22.10
  CMD ["-l", "-"]
  ENTRYPOINT ["/usr/bin/wc"]
 
